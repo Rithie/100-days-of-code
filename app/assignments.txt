@@ -1,0 +1,6 @@
+::Aplicativo de Rematricula::
+
+
+
+1. Mostrar disciplinas em uma lista.
+2. Pegar disciplina clicada pelo usuario.
