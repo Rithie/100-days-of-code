@@ -1,27 +1,16 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
-.blue {
-  background: #3498db;
-}
 
-.purple {
-  background: #9b59b6;
-}
+.blue { background: #3498db; }
 
-.navy {
-  background: #34495e;
-}
+.purple { background: #9b59b6; }
 
-.green {
-  background: #2ecc71;
-}
+.navy { background: #34495e; }
 
-.red {
-  background: #e74c3c;
-}
+.green { background: #2ecc71; }
 
-.orange {
-  background: #f39c12;
-}
+.red { background: #e74c3c; }
+
+.orange { background: #f39c12; }
 
 .cs335, .cs426, .md303, .md352, .md313, .cs240 {
   font-weight: 300;
@@ -131,4 +120,92 @@ table th, table td {
   bottom: 90%;
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
+}
+
+#main {
+    min-height: 800px;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-flow: row;
+}
+
+#main > article {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #cccc33;
+    border-radius: 7pt;
+    background: #dddd88;
+    flex: 3 1 60%;
+    order: 2;
+}
+
+#main > nav {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb;
+    border-radius: 7pt;
+    background: #ccccff;
+    flex: 1 6 20%;
+    order: 1;
+}
+
+#main > aside {
+    margin: 4px;
+    padding: 5px;
+    border: 1px solid #8888bb;
+    border-radius: 7pt;
+    background: #ccccff;
+    flex: 1 6 20%;
+    order: 3;
+}
+
+header, footer {
+    display: block;
+    margin: 4px;
+    padding: 4em;
+    min-height: 100px;
+    /*border: 1px solid #eebb55;*/
+    /*border-radius: 7pt;*/
+
+    background-color: #17BEBB;
+    border-bottom: 0.5em solid #2E282A;
+    color: #2E282A;
+    text-align: center;
+    /*margin-bottom: 2em;*/
+    /*padding: 4.5em 2em;*/
+}
+.hero {
+  background-color: #17BEBB;
+  border-bottom: 0.5em solid #2E282A;
+  color: #2E282A;
+  text-align: center;
+  /*margin-bottom: 2em;*/
+  padding: 4.5em 2em;
+}
+
+.hero p {
+  margin-bottom: 0;
+}
+h1 {
+  font-family: 'Roboto Slab';
+  font-size: 100%;
+  margin: 0 0 0.25em;
+}
+
+/* Too narrow to support three columns */
+@media screen and (max-width: 680px){
+    #main, #page {
+        flex-direction: column;
+    }
+
+    #main > article, #main > nav, #main > aside {
+    /* Return them to document order */
+        order: 0;
+    }
+
+    #main > nav, #main > aside, header, footer {
+        min-height: 50px;
+        max-height: 50px;
+    }
 }

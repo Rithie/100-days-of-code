@@ -3,4 +3,6 @@
 
 
 1. Mostrar disciplinas em uma lista.
-2. Pegar disciplina clicada pelo usuario.
+2. Mostrar tabela de horarios com as disciplinas escolhidas.
+3. Pegar disciplina clicada pelo usuario.
+4. Verificar cruzamentos.
