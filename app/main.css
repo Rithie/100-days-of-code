@@ -1,22 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
 
-.blue { background: #3498db; }
-
-.purple { background: #9b59b6; }
-
-.navy { background: #34495e; }
-
-.green { background: #2ecc71; }
-
-.red { background: #e74c3c; }
-
-.orange { background: #f39c12; }
-
-.cs335, .cs426, .md303, .md352, .md313, .cs240 {
-  font-weight: 300;
-  cursor: pointer;
-}
-
 body{
   background: #1abc9c;
   font-family: sans-serif;
@@ -32,6 +15,25 @@ body{
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
+}
+.corVermelha{ background: #c30f0f !important;}
+.corVerde{ background: #5ccc2e !important;}
+
+.blue { background: #3498db; }
+
+.purple { background: #9b59b6; }
+
+.navy { background: #34495e; }
+
+.green { background: #2ecc71; }
+
+.red { background: #e74c3c; }
+
+.orange { background: #f39c12; }
+
+.cs335, .cs426, .md303, .md352, .md313, .cs240 {
+  font-weight: 300;
+  cursor: pointer;
 }
 
 table {
