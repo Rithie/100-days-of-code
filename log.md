@@ -28,8 +28,8 @@ but, I think it's getting its shape.
 I know, I'm not doing the elegant way yet... but I'll get there. Hold on tight!!!! :ghost:
 
 **Link(s) to work**
-1. [Looping through an array and adding some behavior to its items ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
-2. [Adding events to each element gotten from the array above](http://jsfiddle.net/anurag/34msm/)
-3. [Setting a timeout function](https://developer.mozilla.org/en-US/docs/Web/Events/mouseleave)
-4. [Getting a attribute from an element](http://www.w3schools.com/jsref/met_element_getattribute.asp)
-5. [Adding element to the DOM](http://www.javascriptkit.com/javatutors/dom2.shtml)
+* 1. [Looping through an array and adding some behavior to its items ](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach)
+* 2. [Adding events to each element gotten from the array above](http://jsfiddle.net/anurag/34msm/)
+* 3. [Setting a timeout function](https://developer.mozilla.org/en-US/docs/Web/Events/mouseleave)
+* 4. [Getting a attribute from an element](http://www.w3schools.com/jsref/met_element_getattribute.asp)
+* 5. [Adding element to the DOM](http://www.javascriptkit.com/javatutors/dom2.shtml)

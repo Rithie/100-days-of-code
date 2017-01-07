@@ -1,4 +1,4 @@
-# I've joined the #100DaysOfCode Challenge. [see](100main.md)
+# I've joined the #100DaysOfCode Challenge. [see](/100main.md)
 
 ##Projeto
 
