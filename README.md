@@ -7,6 +7,8 @@
   semestre. 
 * Esse desafio consta em 1h de código por dia, iniciando-se  em 2017.
 
+**Link to the App:** [TimeTable App](https://codepen.io/Rithie/full/YNPdYj/)
+
 ## Contents
 * [Log - click here to see my progress](log.md)
 
