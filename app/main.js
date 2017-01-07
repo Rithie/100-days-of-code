@@ -3,6 +3,7 @@
 	App Rematricula
 	Euler Alvarenga
 */
+var free = false;
 calendario = [
                {
                  "horario":"a1",
@@ -46,8 +47,38 @@ window.addEventListener('load', function(){
     lis[i].addEventListener("click",     addToCalendar, false);
   }
 
-  function addToCalendar(){
-    console.log('I was clicked');
+  function addToCalendar(event){
+    var divoverlay = document.getElementById('overlay')
+    //se não houver conflitos, adicionar na grade.
+    if (free){
+      var dis = event.target.getAttribute('d-rec');
+      console.log(dis);
+      console.log(free);
+
+      var pos = event.target.getAttribute('position');
+
+      // separa os horários e coloca em um array.
+      var addr = pos.split(" ");
+      document.getElementById(addr).textContent = dis;  // adiciona disciplina na grade
+      document.getElementById(addr).style.background = '#93bfcc'; // seta cor de fundo. Futuramente setar cores aleatórias
+
+      divoverlay.style.display = 'block';
+      divoverlay.textContent = 'Adicionado com sucesso!';
+      // reset the color after a small amount of time
+      setTimeout(function() {
+          document.getElementById('overlay').style.display = 'none';
+      }, 1000);
+
+    }else{
+      divoverlay.style.display = 'block';
+      divoverlay.textContent = 'Conflito de Horários!';
+      divoverlay.style.background = 'rgba(231,76,60,0.93)';
+      // reset the color after a small amount of time
+      setTimeout(function() {
+          divoverlay.style.display = 'none';
+      }, 1000);
+    }
+
   }
 
   // essa função executa quando o mouse está fora da lista retirando as classes
@@ -71,8 +102,10 @@ window.addEventListener('load', function(){
 
     event.preventDefault();  // prevent the default Enter's action
 
+    console.log(event.target);
     //pega o attr position para verificar quais horarios a disciplina está.
     var pos = event.target.getAttribute('position');
+
 
     // separa os horários e coloca em um array.
     var addr = pos.split(" ");
@@ -85,8 +118,10 @@ window.addEventListener('load', function(){
       // verifica cada disciplina, se vazia
       if(alvo.textContent === ''){
         alvo.className += " corVerde"; // adiciona a classe verde
+        free = true;
       }else{
         //alvo.style.background = 'red';
+        free = false;
         alvo.className += " corVermelha"; // adiciona a classe vermelha
       }
 
@@ -95,11 +130,11 @@ window.addEventListener('load', function(){
   }
 
 
-	for (var key in calendario) {
-		  console.log("Celula " + calendario[key].horario); // "User john is #234"
-			console.log("Disciplina " + calendario[key].disciplina); // "User john is #234"
-	    console.log("Professor " + calendario[key].professor + " is #" + key); // "User john is #234"
-	}
+	// for (var key in calendario) {
+	// 	  console.log("Celula " + calendario[key].horario); // "User john is #234"
+	// 		console.log("Disciplina " + calendario[key].disciplina); // "User john is #234"
+	//     console.log("Professor " + calendario[key].professor + " is #" + key); // "User john is #234"
+	// }
 	//var listroot = document.getElementsByClassName('todo-list');
   // var newLi = document.createElement('li');   // criar um item da lista.
   //     newLi.className = 'todo-item'; // atribuir css class ao elemento.

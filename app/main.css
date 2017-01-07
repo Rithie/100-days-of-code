@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300,400);
 
 body{
-  background: #1abc9c;
+  background: #fafafa;
   font-family: sans-serif;
   padding: 10px;
 }
@@ -16,8 +16,26 @@ body{
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-.corVermelha{ background: #c30f0f !important;}
-.corVerde{ background: #5ccc2e !important;}
+
+#overlay {
+      background-color: rgba(46,204,113,0.94);
+      z-index: 1006;
+      position: absolute;
+      right: 40px;
+      top: 10px;
+      width: 200px;
+      height: inherit;
+      display: none;
+      margin: 0 auto;
+      padding: 10px;
+      color: #efefef;
+      text-align: center;
+      font-weight: 600;
+      font-family: 'Open Sans', Helvetica;
+}
+
+.corVermelha{ background: #da2424 !important;}
+.corVerde{    background: #bdff3b !important;}
 
 .blue { background: #3498db; }
 
@@ -38,7 +56,7 @@ body{
 
 table {
   font-family: 'Open Sans', Helvetica;
-  color: #efefef;
+  color: #100f0f;
 }
 table tr:nth-child(2n) {
   background: #eff0f1;
@@ -137,9 +155,9 @@ table th, table td {
 #main > article {
     margin: 4px;
     padding: 5px;
-    border: 1px solid #cccc33;
-    border-radius: 7pt;
-    background: #dddd88;
+    /*border: 1px solid #cccc33;*/
+    /*border-radius: 7pt;*/
+    /*background: #dddd88;*/
     flex: 3 1 60%;
     order: 2;
 }
@@ -147,9 +165,9 @@ table th, table td {
 #main > nav {
     margin: 4px;
     padding: 5px;
-    border: 1px solid #8888bb;
+    /*border: 1px solid #8888bb;
     border-radius: 7pt;
-    background: #ccccff;
+    background: #ccccff;*/
     flex: 1 6 20%;
     order: 1;
 }

@@ -2,20 +2,22 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Lab 18 - Event Delegation</title>
+	<title>Matrícula IFET</title>
 	<link rel='stylesheet' href='main.css'/>
 </head>
 <body>
+	<div id="overlay"></div>
 	<h2>Time Table Horário das Disciplinas IFETRP</h2><br>
 
-	<header>
+	<!-- <header>
 
 			<h1>Grid : Flex</h1>
 			<p><strong>A bare-bones 12-column grid</strong></p>
 
-	</header>
+	</header> -->
 	<div id='main'>
 		<article>
+
 			<!-- / College Timetable -->
 			<div class='tab'>
 				<table border='0' cellpadding='0' cellspacing='0'>
@@ -68,12 +70,12 @@
 						<td id='c25'>-</td>
 					</tr>
 					<tr>
-						<td id='c26' class='time'>14.00</td>
+						<td class='time'>14.00</td>
+						<td id='c26'></td>
 						<td id='c27'></td>
-						<td id='c28'></td>
-						<td id='c29' class='cs426 purple' data-tooltip='Computer Graphics'>CS426 [CS2]</td>
-						<td id='c30' class='cs240 orange' data-tooltip='Operating Systems'>CS240 [TH1]</td>
-						<td id='c31'>-</td>
+						<td id='c28' class='cs426 purple' data-tooltip='Computer Graphics'>CS426 [CS2]</td>
+						<td id='c29' class='cs240 orange' data-tooltip='Operating Systems'>CS240 [TH1]</td>
+						<td id='c30'>-</td>
 					</tr>
 					<!-- <tr>
 						<td class='time'>15.00</td>
@@ -110,23 +112,30 @@
 					</li>
 					<li class="list-item" >
 		      	<input id='label-1' type='checkbox' checked/>
-			      <label position="c1 c2" for='label-1'>
+			      <label position="c1 c2" d-rec="CC003"for='label-1'>
 			        <h2>ENG SOFTWARE </h2>
 								<span>Turma CS335</span></h2>
 			      </label>
 		    	</li>
 					<li class="list-item" >
 		      	<input id='label-2' type='checkbox' checked/>
-			      <label position="c2" for='label-2'>
+			      <label position="c2" d-rec="CC123" for='label-2'>
 			        <h2 data-tooltip='Engenharia de Software' >ENG SOFTWARE </h2>
 								<span>Turma CS335</span></h2>
 			      </label>
 		    	</li>
 					<li class="list-item" >
-		      	<input id='label-2' type='checkbox' checked/>
-			      <label position="c3" for='label-2'>
-			        <h2 data-tooltip='Engenharia de Software' >ENG SOFTWARE </h2>
-								<span>Turma CS335</span></h2>
+		      	<input id='label-3' type='checkbox' checked/>
+			      <label position="c1 c3 c26 c29" d-rec="MAT254" for='label-3'>
+			        <h4>Calculo Diferencial & Integral</h4>
+							<span><b>Turma:</b> Noite</span></h2>
+			      </label>
+		    	</li>
+					<li class="list-item" >
+		      	<input id='label-5' type='checkbox' checked/>
+			      <label position="c26" d-rec="MAT254" for='label-5'>
+			        <h4>Calculo Diferencial & Integral</h4>
+							<span><b>Turma:</b> Noite</span></h2>
 			      </label>
 		    	</li>
 <!--
