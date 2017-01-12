@@ -12,5 +12,6 @@ logs
 results
 
 npm-debug.log
-node_modules
-build
+/app/node_modules
+/app/build
+
