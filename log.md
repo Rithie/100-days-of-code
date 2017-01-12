@@ -35,3 +35,7 @@ I know, I'm not doing the elegant way yet... but I'll get there. Hold on tight!!
 5. [Adding element to the DOM](http://www.javascriptkit.com/javatutors/dom2.shtml)
 
   ​
+[Bootstwatch](https://bootswatch.com)
+[Undercore Lib](http://underscorejs.org/#each)
+[Javascript Arrays](http://www.w3schools.com/js/js_array_methods.asp)
+[Javascript Array Methods: Unshift(), Shift(), Push(), And Pop()](https://www.bennadel.com/blog/1796-javascript-array-methods-unshift-shift-push-and-pop.htm)

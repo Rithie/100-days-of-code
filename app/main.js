@@ -28,6 +28,21 @@ calendario = [
                }
             ]
 horarioaluno = [];
+
+var MyArray = function() {
+    var arr = [];
+    arr.push = function() {
+        console.log("PUSHING", arguments);
+        return Array.prototype.push.apply(this, arguments);
+        
+        
+    }
+
+    return arr;
+};
+
+var arr = new MyArray;
+
 // console.log(horarioaluno);
 // horarioaluno.push(calendario[1]);
 // if(horarioaluno[0].horario === calendario[0].horario)
@@ -36,7 +51,8 @@ horarioaluno = [];
 
 // quando a página carregar >>
 window.addEventListener('load', function(){
-
+  myFunction();
+  console.log('fui chamada');
   // selecionar todos os elementos <li> que tenham a classe list-item
   var lis = document.querySelectorAll('li.list-item');
 
@@ -48,7 +64,7 @@ window.addEventListener('load', function(){
   }
 
   function addToCalendar(event){
-    var divoverlay = document.getElementById('overlay')
+    var overlayDiv = document.getElementById('overlay')
     //se não houver conflitos, adicionar na grade.
     if (free){
       var dis = event.target.getAttribute('d-rec');
@@ -59,23 +75,37 @@ window.addEventListener('load', function(){
 
       // separa os horários e coloca em um array.
       var addr = pos.split(" ");
-      document.getElementById(addr).textContent = dis;  // adiciona disciplina na grade
-      document.getElementById(addr).style.background = '#93bfcc'; // seta cor de fundo. Futuramente setar cores aleatórias
+      
+      // adiconar materia ao array (hardcoded data for now)
+      arr.push({
+                 "horario":"a1",
+                 "turma":"MAT254",
+                 "periodo":"5/2016",
+                 "sigla":"CALC3",
+                 "disciplina": "Calculo III",
+                 "professor":"Lucas Lattari"
+               });
+      //myFunction(arr[0]);
+      // adiciona disciplina na grade
+      document.getElementById(addr).textContent = dis;  
+      // seta cor de fundo. Futuramente setar cores aleatórias
+      document.getElementById(addr).style.background = '#93bfcc'; 
 
-      divoverlay.style.display = 'block';
-      divoverlay.textContent = 'Adicionado com sucesso!';
+      overlayDiv.style.display = 'block'; // tornar visivel mensagem de sucesso
+      overlayDiv.textContent = 'Adicionado com sucesso!'; // adicionar mensagem de sucesso
       // reset the color after a small amount of time
       setTimeout(function() {
           document.getElementById('overlay').style.display = 'none';
       }, 1000);
 
+    // casa haja algum conflito,  
     }else{
-      divoverlay.style.display = 'block';
-      divoverlay.textContent = 'Conflito de Horários!';
-      divoverlay.style.background = 'rgba(231,76,60,0.93)';
+      overlayDiv.style.display = 'block'; // tornar visivel mensagem de erro
+      overlayDiv.textContent = 'Conflito de Horários!'; // adicionar mensagem de erro
+      overlayDiv.style.background = 'rgba(231,76,60,0.93)'; // setar cor.
       // reset the color after a small amount of time
       setTimeout(function() {
-          divoverlay.style.display = 'none';
+          overlayDiv.style.display = 'none';
       }, 1000);
     }
 
@@ -142,15 +172,33 @@ window.addEventListener('load', function(){
   //     newLi.innerHTML = '<b>God is good</b>';
   //     document.getElementsByClassName('todo-list').appendChild(newLi);
 
-      function myFunction() {
-          var para = document.createElement("P");
+  function drawList() {
+
+      // se o array estiver vazio, não desenhar
+      if( horarioaluno.length !== 0){
+          var para = document.createElement("tr");
           var t = document.createTextNode("This is a paragraph.");
           para.appendChild(t);
+          //para.className('info');
           para.setAttribute('href', 'mypage.htm');
-          document.querySelector('ul.dcp-list').appendChild(para);
-          document.querySelector('ul.dcp-list').addEventListener('click', msg, false);
+          para.innerHTML = '<td><span class="glyphicon glyphicon-star"></span> '+ horario[key].turma +'</td><td>'+ horario[key].periodo +'</td><td>' + horario[key].disciplina +'</td><td class="remove-buttom" title="remover disciplina">[x]</td>';
+          document.getElementById('dsp-list').appendChild(para);
+          //add o event listener ao botão que remove a disciplina.
+          document.querySelector('.remove-buttom').addEventListener('click', msg, false);
       }
+      //
+      else{
+        console.log('vazio');
+         var el = document.createElement("p");
+         var text = document.createTextNode("Grade de horários vazia.");
+         el.appendChild(text);
+         document.getElementById('dsp-list').appendChild(el);
+      }
+      //  for( var key in horarioaluno ) {
 
+          
+      // }
+      }
       function msg(){
         alert('oi');
       }
