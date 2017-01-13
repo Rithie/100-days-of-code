@@ -10,3 +10,4 @@ const p = new TimeTable(daysOfWeek, horarios);
 // console.log(Point.distance(p1, p2));
 //console.log(p.greeting(),p.isFree);
 p.drawTable();
+console.log(p);

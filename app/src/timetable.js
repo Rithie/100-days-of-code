@@ -5,6 +5,23 @@ function TimeTable(daysOfWeek,aulaHorarios) {
   //setando os dias da semana
   this.daysOfWeek = daysOfWeek;
   this.horarios   = aulaHorarios;
+  this.dspList    = [{
+                 "horario":"c1",
+                 "turma":"MAT254",
+                 "periodo":"5/2016",
+                 "sigla":"CALC3",
+                 "disciplina": "Calculo III",
+                 "professor":"Lucas Lattari"
+               },
+               {
+                 "horario":"c33",
+                 "turma":"MAT254",
+                 "periodo":"5/2016",
+                 "sigla":"CALC3",
+                 "disciplina": "Calculo III",
+                 "professor":"Lucas Lattari"
+               }];
+
   
   this.isF = true;  
 //   this.name = {
@@ -26,6 +43,10 @@ function TimeTable(daysOfWeek,aulaHorarios) {
 
 
   this.init = () => {}
+
+  this.addToList = () => {
+      
+  }
 
   this.drawTable = () => {
 
@@ -70,9 +91,26 @@ function TimeTable(daysOfWeek,aulaHorarios) {
                 }else{
                     var td = document.createElement("td");
                     td.setAttribute("id", "c" + cellID); // setar id à célula referente à sua posição.
+
+                    let codigo = 'c' + cellID;
+                    let materia_sigla;
+                    let materia_nome;
+
+                    //verifica se ha disciplinas no array, caso haja, percorrer as displinas e adicion'alas em seus  devidos lugares
+                    if(this.dspList.length > 0){  
+                        for (var a = 0; a < this.dspList.length; a++) {
+                           // console.log(codigo);
+                           if( (this.dspList[a].horario === codigo) && (this.dspList[a].horario !== undefined) ){
+                               materia_sigla = this.dspList[a].sigla;
+                               materia_nome = this.dspList[a].disciplina;
+                                //console.log('>> ',materia_sigla);
+                           }
+                                
+                        }
+                    }
                     td.setAttribute('class', 'cell');
-                    td.setAttribute('data-tooltip','vazio');
-                    var cell = document.createTextNode("cell" + col);
+                    td.setAttribute('data-tooltip', materia_nome ? materia_nome : ' vazio ' ); // caso esteja definida adicionar atributo para o bal~ao.
+                    var cell = document.createTextNode(materia_sigla ? materia_sigla : ' - ' ); // caso haja materia acionar o nome, sen~ao adicionar um traço.
                     td.appendChild(cell);
                     document.getElementById("myTr" + lineID ).appendChild(td);
                     cellID++;  
@@ -93,4 +131,4 @@ function TimeTable(daysOfWeek,aulaHorarios) {
   this.hoveringCheck = () => {}
 };
 
-export default TimeTable
+export default TimeTable;
