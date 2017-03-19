@@ -33,7 +33,9 @@ table th, table td {
 }
 th { text-align: center; }
 td.cell{
-    color: #f90;
+    color: #0f1113;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 .days, .time {
@@ -46,6 +48,25 @@ td.cell{
 .time {
   width: 3em !important;
 }
+
+#lista{
+    width: 200px;
+    height: 400px;
+    float: left;
+    border: 1px solid #bada55;
+    padding: 10px;
+    margin: 100px 10px;
+}
+
+#lista ul{
+  list-style: none;
+}
+
+.list-item:hover{ background-color: #bada55;}
+.list-item > span { display: block; }
+
+.corVermelha{ background: #da2424 !important;}
+.corVerde{    background: #bdff3b !important;}
 
 /* Add this attribute to the element that needs a tooltip */
 [data-tooltip] {

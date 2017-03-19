@@ -1,0 +1,13 @@
+http://stackoverflow.com/questions/8840580/force-dom-redraw-refresh-on-chrome-mac
+
+https://www.youtube.com/watch?v=kNH0z1rAdl0 // dom events
+
+http://stackoverflow.com/questions/2190850/create-a-custom-callback-in-javascript //callback calls !important and good!
+
+https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS // class JS
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes //CLASSES JS
+
+http://glyphicons.bootstrapcheatsheets.com/ ICONS
+
+http://www.javascriptkit.com/javatutors/dom2.shtml // ADDING ELEMENTS TO THE DOM

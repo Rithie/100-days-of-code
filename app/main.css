@@ -17,6 +17,19 @@
   box-sizing: border-box;
 }
 
+#lista{
+    width: 200px;
+    height: 400px;
+    float: left;
+    border: 1px solid #bada55;
+    padding: 10px;
+    margin: 100px 10px;
+}
+
+#lista ul{
+  list-style: none;
+}
+
 #overlay {
       background-color: rgba(46,204,113,0.94);
       z-index: 1006;
