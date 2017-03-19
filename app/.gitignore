@@ -12,7 +12,7 @@ logs
 results
 
 npm-debug.log
-./node_modules/
-./build/
-./teste/
+/node_modules/
+/build/
+/teste/
 
